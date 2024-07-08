@@ -8,3 +8,9 @@ SELECT COUNT(NAME) FROM CITY
 WHERE POPULATION > 100000;
 
 # -------------------------------------------
+## Revising Aggregations - Averages
+SELECT AVG(POPULATION) FROM CITY
+WHERE DISTRICT = 'California';
+
+# -------------------------------------------
+## 
