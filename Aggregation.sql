@@ -13,4 +13,5 @@ SELECT AVG(POPULATION) FROM CITY
 WHERE DISTRICT = 'California';
 
 # -------------------------------------------
-## 
+## Average Population
+SELECT FLOOR(AVG(POPULATION)) FROM CITY;
