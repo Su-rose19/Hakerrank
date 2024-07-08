@@ -15,3 +15,8 @@ WHERE DISTRICT = 'California';
 # -------------------------------------------
 ## Average Population
 SELECT FLOOR(AVG(POPULATION)) FROM CITY;
+
+# -------------------------------------------
+## Japan Population
+SELECT SUM(POPULATION) FROM CITY
+WHERE COUNTRYCODE = 'JPN';
