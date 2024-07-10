@@ -20,3 +20,8 @@ SELECT FLOOR(AVG(POPULATION)) FROM CITY;
 ## Japan Population
 SELECT SUM(POPULATION) FROM CITY
 WHERE COUNTRYCODE = 'JPN';
+
+# -------------------------------------------
+## Population Density Difference
+SELECT (MAX(POPULATION) - MIN(POPULATION))
+FROM CITY;
