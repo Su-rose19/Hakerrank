@@ -32,6 +32,14 @@ SELECT CONVERT(SUM(LAT_N), DECIMAL(65,2)), CONVERT(SUM(LONG_W), DECIMAL(65,2))
 FROM STATION;
 
 # -------------------------------------------
+## Weather Observation Station_16 
+SELECT CONVERT((LAT_N), DECIMAL(65,4)) 
+FROM STATION
+WHERE LAT_N = ( SELECT MIN(LAT_N) 
+               FROM STATION
+               WHERE LAT_N> 38.7780);
+
+# -------------------------------------------
 ## Weather Observation Station_17
 SELECT CONVERT((LONG_W), DECIMAL(65,4)) 
 FROM STATION
@@ -40,4 +48,4 @@ WHERE LAT_N = ( SELECT MIN(LAT_N)
                WHERE LAT_N> 38.7780);
 
 # -------------------------------------------
-## Weather 
+## Weather Observation Station 
