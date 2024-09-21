@@ -32,6 +32,17 @@ SELECT CONVERT(SUM(LAT_N), DECIMAL(65,2)), CONVERT(SUM(LONG_W), DECIMAL(65,2))
 FROM STATION;
 
 # -------------------------------------------
+## Weather Observation Station_9
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE (CITY NOT LIKE 'A%')
+AND (CITY NOT LIKE 'E%')
+AND (CITY NOT LIKE 'I%')
+AND (CITY NOT LIKE 'O%')
+AND (CITY NOT LIKE 'U%');
+
+# -------------------------------------------
 ## Weather Observation Station_16 
 SELECT CONVERT((LAT_N), DECIMAL(65,4)) 
 FROM STATION
