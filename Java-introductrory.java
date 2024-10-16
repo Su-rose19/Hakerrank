@@ -74,3 +74,53 @@ public class Solution {
         System.out.println("Int: " + i);
     }
 }
+
+//===============================================================
+//Java Output Formatting
+
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("================================");
+            for(int i=0;i<3;i++){
+                String s1=sc.next();
+                int x=sc.nextInt();
+                //Complete this line
+                System.out.print(s1);
+                for(int j = s1.length()+1; j<=15;j++){
+                    System.out.print(" ");
+                }
+                int numDigits = String.valueOf(x).length();
+                if(numDigits==3){
+                    System.out.println(x);
+                }
+                else if(numDigits==2){
+                    System.out.println("0"+x);
+                }
+                else{
+                    System.out.println("00"+x);
+                }
+            }
+            System.out.println("================================");
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
