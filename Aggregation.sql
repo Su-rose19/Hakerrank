@@ -59,4 +59,7 @@ WHERE LAT_N = ( SELECT MIN(LAT_N)
                WHERE LAT_N> 38.7780);
 
 # -------------------------------------------
-## Weather Observation Station 
+## The Blunder
+SELECT CEIL(AVG(SALARY) - 
+        AVG(REPLACE(SALARY, 0, '')))
+FROM EMPLOYEES;
