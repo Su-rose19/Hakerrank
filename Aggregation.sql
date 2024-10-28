@@ -63,3 +63,12 @@ WHERE LAT_N = ( SELECT MIN(LAT_N)
 SELECT CEIL(AVG(SALARY) - 
         AVG(REPLACE(SALARY, 0, '')))
 FROM EMPLOYEES;
+
+# -------------------------------------------
+## Top Earners
+SELECT MAX(SALARY * MONTHS), COUNT(*)
+FROM EMPLOYEE
+WHERE (SALARY * MONTHS) = (SELECT MAX(SALARY * MONTHS)
+                            FROM EMPLOYEE);
+
+
