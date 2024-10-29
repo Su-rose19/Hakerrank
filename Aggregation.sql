@@ -45,13 +45,23 @@ AND (CITY NOT LIKE 'U%');
 
 # -------------------------------------------
 ## Weather Observation Station_13 
+
 SELECT CONVERT(SUM(LAT_N), DECIMAL(65,4)) 
 FROM STATION
 WHERE LAT_N> 38.7780
     AND LAT_N< 137.2345;
 
+
 # -------------------------------------------
-## Weather Observation Station_16 
+## Weather Observation Station_14 
+
+SELECT CONVERT(MAX(LAT_N), DECIMAL(65,4)) 
+FROM STATION
+WHERE LAT_N< 137.2345;
+
+# -------------------------------------------
+## Weather Observation Station_16
+
 SELECT CONVERT((LAT_N), DECIMAL(65,4)) 
 FROM STATION
 WHERE LAT_N = ( SELECT MIN(LAT_N) 
@@ -60,6 +70,7 @@ WHERE LAT_N = ( SELECT MIN(LAT_N)
 
 # -------------------------------------------
 ## Weather Observation Station_17
+
 SELECT CONVERT((LONG_W), DECIMAL(65,4)) 
 FROM STATION
 WHERE LAT_N = ( SELECT MIN(LAT_N) 
@@ -68,12 +79,14 @@ WHERE LAT_N = ( SELECT MIN(LAT_N)
 
 # -------------------------------------------
 ## The Blunder
+
 SELECT CEIL(AVG(SALARY) - 
         AVG(REPLACE(SALARY, 0, '')))
 FROM EMPLOYEES;
 
 # -------------------------------------------
 ## Top Earners
+
 SELECT MAX(SALARY * MONTHS), COUNT(*)
 FROM EMPLOYEE
 WHERE (SALARY * MONTHS) = (SELECT MAX(SALARY * MONTHS)
