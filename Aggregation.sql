@@ -42,6 +42,14 @@ AND (CITY NOT LIKE 'I%')
 AND (CITY NOT LIKE 'O%')
 AND (CITY NOT LIKE 'U%');
 
+
+# -------------------------------------------
+## Weather Observation Station_13 
+SELECT CONVERT(SUM(LAT_N), DECIMAL(65,4)) 
+FROM STATION
+WHERE LAT_N> 38.7780
+    AND LAT_N< 137.2345;
+
 # -------------------------------------------
 ## Weather Observation Station_16 
 SELECT CONVERT((LAT_N), DECIMAL(65,4)) 
