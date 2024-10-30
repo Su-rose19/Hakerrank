@@ -60,6 +60,15 @@ FROM STATION
 WHERE LAT_N< 137.2345;
 
 # -------------------------------------------
+## Weather Observation Station_15
+
+SELECT CONVERT((LONG_W), DECIMAL(65,4))
+FROM STATION
+WHERE LAT_N = (SELECT MAX(LAT_N)
+               FROM STATION
+               WHERE LAT_N < 137.2345);
+
+# -------------------------------------------
 ## Weather Observation Station_16
 
 SELECT CONVERT((LAT_N), DECIMAL(65,4)) 
