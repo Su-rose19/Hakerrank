@@ -87,6 +87,13 @@ WHERE LAT_N = ( SELECT MIN(LAT_N)
                WHERE LAT_N> 38.7780);
 
 # -------------------------------------------
+## Weather Observation Station_18
+
+SELECT ROUND( ABS(MIN(LAT_N) - MAX(LAT_N)) + ABS(MIN(LONG_W) - MAX(LONG_W)), 4) 
+FROM STATION;
+
+
+# -------------------------------------------
 ## The Blunder
 
 SELECT CEIL(AVG(SALARY) - 
